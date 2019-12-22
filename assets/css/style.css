@@ -1,0 +1,16 @@
+body {
+    text-emphasis: bold;
+    background-color: yellow;
+    font-family: 'Courgette', cursive;;
+}
+
+h1, h2, .guess-boxes{
+    text-emphasis: bold;
+    font-size: 30px;
+}
+
+h2, .guess-boxes {
+    text-emphasis: bold;
+    font-size: larger;
+}
+
