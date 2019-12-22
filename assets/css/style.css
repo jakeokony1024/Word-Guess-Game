@@ -1,16 +1,22 @@
 body {
     text-emphasis: bold;
     background-color: yellow;
-    font-family: 'Courgette', cursive;;
+    font-family: 'Courgette', cursive;
+
 }
 
-h1, h2, .guess-boxes{
+#mainContainer {
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
     text-emphasis: bold;
-    font-size: 30px;
+    font-size: 50px;
 }
 
-h2, .guess-boxes {
+h2,
+.guess-boxes {
     text-emphasis: bold;
-    font-size: larger;
+    font-size: 20px;
 }
-
