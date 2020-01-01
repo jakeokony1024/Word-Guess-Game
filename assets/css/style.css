@@ -24,3 +24,8 @@ h2,
     padding: 20px;
     margin: 20px;
 }
+
+#imageSection {
+    float: left;
+}
+
