@@ -40,6 +40,7 @@ function startGame() {
     //Change HTML to show JS//
 
     document.getElementById("wordtoGuess").innerHTML = blanksandSucesses.join("  ");
+    document.getElementById("lettersUsed").innerHTML = [];
     document.getElementById("guessesLeft").innerHTML = guessesLeft;
     document.getElementById("winCounter").innerHTML = winCounter;
     document.getElementById("lossCounter").innerHTML = lossCounter;
@@ -80,6 +81,9 @@ function checkLetters(letter) {
 
 function roundComplete(){
     console.log("winCount: " + winCounter + " | Loss Count" + lossCounter + " | Guesses Left" + guessesLeft);
+    document.getElementById("guessesLeft").innerHTML = guessesLeft;
+    document.getElementById("wordtoGuess").innerHTML = blanksandSucesses.join("  ");
+    document.getElementById("lettersUsed").innerHTML = wrongletters.join("  ");
 
     if (lettersinWord.toString() == blanksandSucesses.toString()) {
         winCounter ++;
