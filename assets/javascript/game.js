@@ -25,8 +25,23 @@ function startGame (){
 
     selectedWord = answers[Math.floor(Math.random() * answers.length)];
     lettersinWord = selectedWord.split("");
+    blanks = selectedWord.length;
+    //reset game//
+    guessesLeft = 10;
+    wrongletters = [];
+    blanksandSucesses = [];
+
+    //populate right number of blanks//
+
+    for (var i=0; i<blanks; i++){
+        blanksandSucesses.push("_");
+    }
+
     //Testing funtion//
     console.log(selectedWord);
+    console.log(lettersinWord);
+    console.log(blanks);
+    console.log(blanksandSucesses);
 }
 
 //Main Process//
