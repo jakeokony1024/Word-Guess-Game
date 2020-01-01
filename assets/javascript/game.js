@@ -36,6 +36,14 @@ function startGame (){
     for (var i=0; i<blanks; i++){
         blanksandSucesses.push("_");
     }
+    
+    //Change HTML to show JS//
+
+    document.getElementById("wordtoGuess").innerHTML = blanksandSucesses.join("  ");
+    document.getElementById("guessesLeft").innerHTML = guessesLeft;
+    document.getElementById("winCounter").innerHTML = winCounter;
+    document.getElementById("lossCounter").innerHTML = lossCounter;
+   
 
     //Testing funtion//
     console.log(selectedWord);
@@ -44,6 +52,27 @@ function startGame (){
     console.log(blanksandSucesses);
 }
 
+function checkLetters(letter) {
+
+    var letterinWord = false;
+
+    for (var i=0; i<blanks; i++){
+        if(selectedWord[i] == letter){
+            letterinWord = true;
+            
+        }
+    }
+}
+
 //Main Process//
 
 startGame ();
+
+document.onkeyup = function(event) {
+    var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
+    checkLetters(letterGuessed);
+    console.log(letterGuessed);
+
+} 
+
+
