@@ -89,6 +89,8 @@ function roundComplete(){
         winCounter ++;
         alert("You Won Jabroni!");
         document.getElementById("winCounter").innerHTML = winCounter;
+        var audioElement = document.createElement("audio");
+        audioElement.setAttribute("src", "../assets/MP3/");
 
         startGame();
     }
