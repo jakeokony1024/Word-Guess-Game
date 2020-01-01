@@ -14,7 +14,7 @@
     <container id="mainContainer">
 
         <header id="headTag">
-            <h1>Its Always Sunny in Philidephia Word Guess Game</h1>
+            <h1>Its Always Sunny in Philidephia Hangman Game</h1>
         
         </header>
     
@@ -23,12 +23,25 @@
         </section>
         <section id="guessBox"> 
             <div>
-                <h2>Word Guessed</h2>
+                <h2>Word to Guess</h2>
+                <div>_ _ _ _ _ _ _ _ _ _ _ </div>
             </div>
+
             
-            <div class="guess-boxes">Letters Guessed</div>
-            <div class="guess-boxes">Wins</div>
-            <div class="guess-boxes">Losses</div>
+            <div class="guess-boxes">Letters Used
+                <span id="lettersUsed"></span>
+            </div>
+            <div class="guess-boxes">Guesses Left
+                <span id="guessesLeft"></span>
+            </div>
+            <div class="guess-boxes">Wins
+                <span id="winBox"></span>
+            </div>
+
+            <div class="guess-boxes">Losses
+                <span id="loseBox"></span>
+            </div>
+
         </section>
     
     </container>
@@ -36,5 +49,5 @@
     
 </body>
 
-<script src="../Word-Guess-Game/assets/javascript/game.js"></script>
+<script type="text/javascript" src="../Word-Guess-Game/assets/javascript/game.js"></script>
 </html>

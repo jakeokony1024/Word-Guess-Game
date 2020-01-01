@@ -13,10 +13,14 @@ body {
 h1 {
     text-emphasis: bold;
     font-size: 50px;
+    
+    
 }
 
 h2,
 .guess-boxes {
     text-emphasis: bold;
     font-size: 20px;
+    padding: 20px;
+    margin: 20px;
 }
