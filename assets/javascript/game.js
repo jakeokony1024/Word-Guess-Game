@@ -45,12 +45,6 @@ function startGame() {
     document.getElementById("winCounter").innerHTML = winCounter;
     document.getElementById("lossCounter").innerHTML = lossCounter;
 
-
-    //Testing funtion//
-    console.log(selectedWord);
-    console.log(lettersinWord);
-    console.log(blanks);
-    console.log(blanksandSucesses);
 }
 
 function checkLetters(letter) {
@@ -76,11 +70,11 @@ function checkLetters(letter) {
         guessesLeft --
     }
 
-    console.log(blanksandSucesses);
+    
 }
 
 function roundComplete(){
-    console.log("winCount: " + winCounter + " | Loss Count" + lossCounter + " | Guesses Left" + guessesLeft);
+    
     document.getElementById("guessesLeft").innerHTML = guessesLeft;
     document.getElementById("wordtoGuess").innerHTML = blanksandSucesses.join("  ");
     document.getElementById("lettersUsed").innerHTML = wrongletters.join("  ");
@@ -90,8 +84,8 @@ function roundComplete(){
         alert("You Won Jabroni!");
         document.getElementById("winCounter").innerHTML = winCounter;
         var audioElement = document.createElement("audio");
-        audioElement.setAttribute("src", "../assets/MP3/");
-
+        audioElement.setAttribute("src", "../assets/MP3/onYourBike.mp3");
+        
         startGame();
     }
 
@@ -112,7 +106,7 @@ startGame();
 document.onkeyup = function (event) {
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
     checkLetters(letterGuessed);
-    console.log(letterGuessed);
+    
     roundComplete(); 
 
 }
