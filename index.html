@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <title>HangMan</title>
 </head>
+
 <body>
 
     <container id="mainContainer">
@@ -16,24 +19,24 @@
         <header id="headTag">
             <h1>Its Always Sunny in Philidephia</h1>
             <h1>Hangman Game</h1>
-        
+
         </header>
-    
+
         <section id="imageSection">
             <Img src="../Word-Guess-Game/assets/images/group-photo.jpg"></Img>
         </section>
-        <section id="guessBox"> 
+        <section id="guessBox">
             <div>
                 <h2>Word to Guess</h2>
                 <div>_ _ _ _ _ _ _ _ _ _ _ </div>
             </div>
 
-            
+
             <div class="guess-boxes">Letters Used
                 <span id="lettersUsed"></span>
             </div>
             <div class="guess-boxes">Guesses Left
-                <span id="guessesLeft">15</span>
+                <span id="guessesLeft">10</span>
             </div>
             <div class="guess-boxes">Wins
                 <span id="winCounter">0</span>
@@ -44,11 +47,11 @@
             </div>
 
         </section>
-    
+
     </container>
 
-    
+    <script src="../Word-Guess-Game/assets/javascript/game.js"></script>
 </body>
 <!--Linking Javascript page to HTML page-->
-<script type="text/javascript" src="../Word-Guess-Game/assets/javascript/game.js"></script>
+
 </html>
