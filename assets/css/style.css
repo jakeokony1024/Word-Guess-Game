@@ -20,11 +20,18 @@ h1 {
 h2,
 .guess-boxes {
     text-emphasis: bold;
-    font-size: 20px;
+    font-size: 30px;
     padding: 20px;
     margin: 20px;
 }
 
 #imageSection {
     float: left;
+    margin-left: 200px;
+   
+}
+
+img {
+    height: 500px;
+    width: 500px;
 }
