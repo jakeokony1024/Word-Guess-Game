@@ -21,7 +21,7 @@ var guessesLeft = 10;
 //Funtions//
 //-----------------------------------------------------------------------------------------------------//
 
-function startGame (){
+function startGame() {
 
     selectedWord = answers[Math.floor(Math.random() * answers.length)];
     lettersinWord = selectedWord.split("");
@@ -33,17 +33,17 @@ function startGame (){
 
     //populate right number of blanks//
 
-    for (var i=0; i<blanks; i++){
+    for (var i = 0; i < blanks; i++) {
         blanksandSucesses.push("_");
     }
-    
+
     //Change HTML to show JS//
 
     document.getElementById("wordtoGuess").innerHTML = blanksandSucesses.join("  ");
     document.getElementById("guessesLeft").innerHTML = guessesLeft;
     document.getElementById("winCounter").innerHTML = winCounter;
     document.getElementById("lossCounter").innerHTML = lossCounter;
-   
+
 
     //Testing funtion//
     console.log(selectedWord);
@@ -56,23 +56,57 @@ function checkLetters(letter) {
 
     var letterinWord = false;
 
-    for (var i=0; i<blanks; i++){
-        if(selectedWord[i] == letter){
+    for (var i = 0; i < blanks; i++) {
+        if (selectedWord[i] == letter) {
             letterinWord = true;
-            
         }
+    }
+
+    if (letterinWord) {
+        for (var i = 0; i < blanks; i++) {
+            if (selectedWord[i] == letter) {
+                blanksandSucesses[i] = letter;
+            }
+        }
+    }
+
+    else {
+        wrongletters.push(letter);
+        guessesLeft --
+    }
+
+    console.log(blanksandSucesses);
+}
+
+function roundComplete(){
+    console.log("winCount: " + winCounter + " | Loss Count" + lossCounter + " | Guesses Left" + guessesLeft);
+
+    if (lettersinWord.toString() == blanksandSucesses.toString()) {
+        winCounter ++;
+        alert("You Won Jabroni!");
+        document.getElementById("winCounter").innerHTML = winCounter;
+
+        startGame();
+    }
+
+    else if (guessesLeft == 0) {
+        lossCounter++;
+        alert("You Lost Jabroni!");
+        document.getElementById("lossCounter").innerHTML = lossCounter;
+        startGame();
     }
 }
 
+
+
 //Main Process//
 
-startGame ();
+startGame();
 
-document.onkeyup = function(event) {
+document.onkeyup = function (event) {
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
     checkLetters(letterGuessed);
     console.log(letterGuessed);
+    roundComplete(); 
 
-} 
-
-
+}
