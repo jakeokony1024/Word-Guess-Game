@@ -47,6 +47,9 @@ function startGame() {
 
 }
 
+//Function to check for letters in answers//
+//----------------------------------------//
+
 function checkLetters(letter) {
 
     var letterinWord = false;
@@ -72,6 +75,8 @@ function checkLetters(letter) {
 
     
 }
+//Function to reset the page when the round is complete, either win or lose//
+//-------------------------------------------------------------------------//
 
 function roundComplete(){
     
