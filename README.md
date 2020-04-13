@@ -1,8 +1,11 @@
 # Word-Guess-Game
 
-This game was very challanging for me, I got through it with the use of javascript. I have a basic hangman game with an its always Sunny theme. 
+This is a basic hangman style word guess game, with an It's Always Sunny in Philidelphia theme. 
 
-My first step was to figure out the theme and the layout, I wanted to have multiple divs that could be accessed using JS. 
-Once the basic HTML and CSS were done, I started on my psuedocode, which was a lengthy process. I knew that I would have to start by creating variables that held all the data needed. 
-The first array contains all the possible word choices, or answers. 
-The next step I took was to create an array that had all the images I wanted to use, however I couldnt figure out how to get them to change with the answers. 
+This application will populate a random answer from an array, determine how many letters are in the word, minus the spaces, and populates this in the space to guess. It also gives the user an amount of guesses to guess the letters in the answer. 
+
+If the letters guessed match any of the letters in the answer key, it will populate that guessed letter into the answer spot. If the amount of guesses runs out, there is an alert, and then the site refreshes with a new answer to guess with the amount of wins or losses stored on the front end. 
+
+This app makes use of HTMl5, CSS3, and JavaScript, focusing on JS method construction making use of multiple if/ else statements, and for loops to enable the functionality of the site. 
+
+My role was to build the entire app, focusing on learning how to build multiple methods for an application. 
